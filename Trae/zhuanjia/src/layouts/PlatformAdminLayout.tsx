@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart3, Users, BookOpen, Settings, LogOut, Menu, X } from 'lucide-react';
+import { BarChart3, Users, BookOpen, Settings, LogOut, Menu, X, Building } from 'lucide-react';
 import { useState } from 'react';
 
 export const PlatformAdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -8,8 +8,8 @@ export const PlatformAdminLayout: React.FC<{ children: React.ReactNode }> = ({ c
   const menuItems = [
     { icon: BarChart3, label: '数据概览', href: '/admin/platform/dashboard' },
     { icon: Users, label: '专家管理', href: '/admin/platform/experts' },
-    { icon: BookOpen, label: '应用管理', href: '/admin/platform/apps' },
-    { icon: Settings, label: '系统设置', href: '/admin/platform/settings' },
+    { icon: Building, label: '机构管理', href: '/admin/platform/organizations' },
+    { icon: BookOpen, label: '应用管理', href: '/admin/platform/applications' },
   ];
   
   return (
