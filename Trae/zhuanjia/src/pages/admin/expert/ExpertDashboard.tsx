@@ -40,6 +40,12 @@ export const ExpertDashboard: React.FC = () => {
   return (
     <ExpertAdminLayout>
       <div className="space-y-6">
+        {/* 欢迎信息 - 已置顶 */}
+        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-lg p-6">
+          <h2 className="text-2xl font-bold mb-2">欢迎回来，张教授！</h2>
+          <p className="text-blue-100">今天是您专业服务的第 365 天</p>
+        </div>
+
         {/* 专家基本信息卡片 */}
         <div className="bg-white rounded-lg shadow-md p-6">
           <div className="flex justify-between items-start">
@@ -71,13 +77,7 @@ export const ExpertDashboard: React.FC = () => {
             </p>
           </div>
         </div>
-        
-        {/* 欢迎信息 */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-lg p-6">
-          <h2 className="text-2xl font-bold mb-2">欢迎回来，张教授！</h2>
-          <p className="text-blue-100">今天是您专业服务的第 365 天</p>
-        </div>
-        
+
         {/* 统计数据 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
@@ -95,7 +95,7 @@ export const ExpertDashboard: React.FC = () => {
             </div>
           ))}
         </div>
-        
+
         {/* 快速操作 */}
         <div className="bg-white rounded-lg shadow-md p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">快速操作</h3>
@@ -123,7 +123,7 @@ export const ExpertDashboard: React.FC = () => {
             </button>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* 最近调用 */}
           <div className="bg-white rounded-lg shadow-md p-6">

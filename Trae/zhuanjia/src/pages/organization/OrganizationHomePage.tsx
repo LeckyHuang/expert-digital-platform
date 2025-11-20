@@ -22,17 +22,17 @@ interface Course {
 
 const carouselItems = [
   {
-    img: '/images/banners/banner1.jpg',
+    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1920&auto=format&fit=crop',
     title: '数字化转型峰会',
     desc: '年度产业数字化高峰论坛，汇聚行业专家与企业代表'
   },
   {
-    img: '/images/banners/banner2.jpg',
+    img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1920&auto=format&fit=crop',
     title: 'AI应用实战营',
     desc: '面向研发与运营的AI应用训练营，助力企业落地'
   },
   {
-    img: '/images/banners/banner3.jpg',
+    img: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1920&auto=format&fit=crop',
     title: '数据治理研讨会',
     desc: '聚焦数据治理方法论与最佳实践分享'
   }
