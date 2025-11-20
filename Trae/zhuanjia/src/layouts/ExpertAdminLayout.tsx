@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart3, User, BookOpen, Settings, LogOut, Menu, X, Award, TrendingUp } from 'lucide-react';
+import { BarChart3, User, BookOpen, LogOut, Menu, X, Award, TrendingUp, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 
 export const ExpertAdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -7,11 +7,10 @@ export const ExpertAdminLayout: React.FC<{ children: React.ReactNode }> = ({ chi
   
   const menuItems = [
     { icon: BarChart3, label: '个人概览', href: '/admin/expert/dashboard' },
-    { icon: User, label: '个人资料', href: '/admin/expert/profile' },
-    { icon: BookOpen, label: '个人知识库', href: '/admin/expert/knowledge' },
-    { icon: Award, label: '应用管理', href: '/admin/expert/apps' },
+    { icon: User, label: '个人设置', href: '/admin/expert/profile' },
+    { icon: BookOpen, label: '知识库', href: '/admin/expert/knowledge' },
     { icon: TrendingUp, label: '课程管理', href: '/admin/expert/courses' },
-    { icon: Settings, label: '账户设置', href: '/admin/expert/settings' },
+    { icon: Award, label: '应用管理', href: '/admin/expert/apps' },
   ];
   
   return (
@@ -65,9 +64,9 @@ export const ExpertAdminLayout: React.FC<{ children: React.ReactNode }> = ({ chi
             <h1 className="text-xl font-semibold text-gray-800">专家管理后台</h1>
             
             <div className="flex items-center space-x-4">
-              <span className="text-sm text-gray-600">张教授</span>
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                <User size={16} className="text-green-600" />
+              <span className="text-sm text-gray-600">专家</span>
+              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                <User size={16} className="text-blue-600" />
               </div>
             </div>
           </div>
@@ -78,6 +77,9 @@ export const ExpertAdminLayout: React.FC<{ children: React.ReactNode }> = ({ chi
           {children}
         </main>
       </div>
+      
+      {/* 聊天对话框 - 将在后续任务中移除 */}
+      {/* <ChatDialog /> */}
       
       {/* 移动端遮罩 */}
       {isSidebarOpen && (

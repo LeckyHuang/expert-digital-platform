@@ -8,7 +8,7 @@ import { PlatformOrganizationManagement } from './pages/admin/platform/PlatformO
 import { PlatformApplicationManagement } from './pages/admin/platform/PlatformApplicationManagement';
 import { ProfilePage } from './pages/admin/expert/ProfilePage';
 import { KnowledgeBasePage } from './pages/admin/expert/KnowledgeBasePage';
-import { ExpertAppsPage } from './pages/admin/expert/AppsPage';
+import { AppsPage } from './pages/admin/expert/AppsPage';
 import { CoursesPage } from './pages/admin/expert/CoursesPage';
 import { OrganizationHomePage } from './pages/organization/OrganizationHomePage';
 import { OrganizationDashboard } from './pages/admin/organization/OrganizationDashboard';
@@ -61,10 +61,7 @@ const router = createBrowserRouter([
     path: '/admin/expert/knowledge',
     element: <KnowledgeBasePage />
   },
-  {
-    path: '/admin/expert/apps',
-    element: <ExpertAppsPage />
-  },
+  { path: '/admin/expert/apps', element: <AppsPage /> },
   {
     path: '/admin/expert/courses',
     element: <CoursesPage />
