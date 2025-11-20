@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Users, BookOpen, TrendingUp } from 'lucide-react';
+import { MessageCircle, Users, BookOpen, TrendingUp, Crown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Expert } from '../../types/expert';
 import { useAppStore } from '../../stores/appStore';
@@ -38,7 +38,15 @@ export const ExpertCard: React.FC<ExpertCardProps> = ({ expert }) => {
           <div className="flex items-center justify-between">
             <div>
               <button onClick={handleViewDetails} className="text-left">
-                <h3 className="text-lg font-semibold text-gray-900">{expert.name}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                  {expert.name}
+                  {expert.role === '首席专家' && (
+                    <span className="ml-2 px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full flex items-center">
+                      <Crown size={12} className="mr-1" />
+                      王牌专家
+                    </span>
+                  )}
+                </h3>
               </button>
               <p className="text-sm text-gray-600">{expert.role} · {expert.title}</p>
               <p className="text-xs text-gray-500">{expert.organization}</p>

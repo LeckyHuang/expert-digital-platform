@@ -3,13 +3,19 @@ import { HomePage } from './pages/home/HomePage';
 import { ExpertDetailPage } from './pages/expert/ExpertDetailPage';
 import { PlatformDashboard } from './pages/admin/platform/PlatformDashboard';
 import { ExpertDashboard } from './pages/admin/expert/ExpertDashboard';
-import { ExpertsPage } from './pages/admin/platform/ExpertsPage';
-import { AppsPage as PlatformAppsPage } from './pages/admin/platform/AppsPage';
+import { PlatformExpertManagement } from './pages/admin/platform/PlatformExpertManagement';
+import { PlatformOrganizationManagement } from './pages/admin/platform/PlatformOrganizationManagement';
+import { PlatformApplicationManagement } from './pages/admin/platform/PlatformApplicationManagement';
 import { ProfilePage } from './pages/admin/expert/ProfilePage';
 import { KnowledgeBasePage } from './pages/admin/expert/KnowledgeBasePage';
 import { ExpertAppsPage } from './pages/admin/expert/AppsPage';
 import { CoursesPage } from './pages/admin/expert/CoursesPage';
 import { OrganizationHomePage } from './pages/organization/OrganizationHomePage';
+import { OrganizationDashboard } from './pages/admin/organization/OrganizationDashboard';
+import { OrganizationExpertsPage } from './pages/admin/organization/OrganizationExpertsPage';
+import { OrganizationCoursesPage } from './pages/admin/organization/OrganizationCoursesPage';
+import { OrganizationNewsPage } from './pages/admin/organization/OrganizationNewsPage';
+import { OrganizationSettingsPage } from './pages/admin/organization/OrganizationSettingsPage';
 import { ChatDialog } from './components/chat/ChatDialog';
 import { mockExperts } from './utils/mockData';
 
@@ -32,11 +38,15 @@ const router = createBrowserRouter([
   },
   {
     path: '/admin/platform/experts',
-    element: <ExpertsPage />
+    element: <PlatformExpertManagement />
   },
   {
-    path: '/admin/platform/apps',
-    element: <PlatformAppsPage />
+    path: '/admin/platform/organizations',
+    element: <PlatformOrganizationManagement />
+  },
+  {
+    path: '/admin/platform/applications',
+    element: <PlatformApplicationManagement />
   },
   {
     path: '/admin/expert/dashboard',
@@ -58,6 +68,26 @@ const router = createBrowserRouter([
   {
     path: '/admin/expert/courses',
     element: <CoursesPage />
+  },
+  {
+    path: '/admin/organization/dashboard',
+    element: <OrganizationDashboard />
+  },
+  {
+    path: '/admin/organization/experts',
+    element: <OrganizationExpertsPage />
+  },
+  {
+    path: '/admin/organization/courses',
+    element: <OrganizationCoursesPage />
+  },
+  {
+    path: '/admin/organization/news',
+    element: <OrganizationNewsPage />
+  },
+  {
+    path: '/admin/organization/settings',
+    element: <OrganizationSettingsPage />
   }
 ]);
 
